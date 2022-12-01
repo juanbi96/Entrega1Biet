@@ -1,0 +1,48 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="carousel-title">{{ mensaje_inicio }}</h1> 
+
+
+<table>
+    {% for baterias in baterias_seleccionadas %}
+    <p><b>Bateria</p></b>
+        <li>Marca: {{ baterias.marca }}</li>
+        <li>Modelo: {{ baterias.modelo }}</li>
+        <li>Año de fabricación: {{ baterias.año_fabricacion }}</li>
+        <br>
+    {% endfor %}
+</table>
+
+
+<table>
+{% for guitarras in guitarras_seleccionadas %}
+    <p><b>Guitarras</p></b>
+        <li>Marca: {{ guitarras.marca }}</li>
+        <li>Modelo: {{ guitarras.modelo }}</li>
+        <li>Año de fabricación: {{ guitarras.año_fabricacion }}</li>
+        <li>Cuerdas: {{ guitarras.cuerdas }}</li>
+
+        <br>
+    {% endfor %}
+</table>
+
+
+<table>
+    {% for bajos in bajos_seleccionados %}
+        <p><b>Bajos</p></b>
+            <li>Marca: {{ bajos.marca }}</li>
+            <li>Modelo: {{ bajos.modelo }}</li>
+            <li>Año de fabricación: {{ bajos.año_fabricacion }}</li>
+            <li>Cuerdas: {{ bajos.cuerdas }}</li>
+    
+            <br>
+        {% endfor %}
+    </table>
+
+
+<h2></h2>
+
+{% endblock %}  

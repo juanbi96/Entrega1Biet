@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+
+<title>Casa de música</title>
+<link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav id="nav01"></nav>
+
+<div id="main">
+  <h1></h1> 
+  <h2></h2>
+
+  <nav id="scrollspy" class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix" data-offset-top="20"> 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color:rgb(155, 218, 255); width:1795px; padding: 10px">  
+            </ul>
+            <ul style="padding-left:0px" class="navbar-nav ml-auto">
+                <li style="display:inline" class="nav-item">
+                    <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                </li>
+                <li style="display:inline" class="nav-item">
+                    <a class="nav-link" href="{% url 'agregar_bajos' %}">Agregar bajos</a>
+                </li>
+                <li style="display:inline" class="nav-item">
+                    <a class="nav-link" href="{% url 'agregar_baterias' %}">Agregar baterias</a>
+                </li>
+                <li style="display:inline" class="nav-item">
+                    <a class="nav-link" href="{% url 'agregar_guitarras' %}">Agregar guitarras</a>
+                </li>
+                <li style="display:inline" class="nav-item">
+                    <a class="nav-link" href="{% url 'busqueda_db' %}">Busqueda</a>
+                </li>
+            </ul>
+        </div>
+</nav>
+
+
+
+  {% block titulo %}
+                            
+  {% endblock %}
+  <p>Python Coderhouse</p>
+  <p>Comision 34640</p>
+  <p>Juan Biet</p>
+  <p></p>
+
+  <footer id="foot01"></footer>
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html> 

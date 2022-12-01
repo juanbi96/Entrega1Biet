@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="carousel-title">{{ mensaje_busqueda }}</h1> 
+
+<h2>Esta busqueda se efectuará entre todos los instrumentos. </h2>
+
+
+<form action="{% url 'resultado_busqueda' %}" method="GET">
+    <div class="form-group" style="display:inline">
+        
+        <p>Ingrese la marca del instrumento que desea buscar:</p>
+        <input type="text" name="marca" id="marca">
+        <input type="submit" class="btn btn-primary btn-block" value="Buscar">
+       
+    </div>      
+</form>
+<p  style="color:rgb(255, 145, 0); padding-bottom:0px">El caracter * busca todos los instrumentos de la base de datos.</p>
+{% endblock %}  
