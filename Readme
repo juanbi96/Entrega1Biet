@@ -1,1 +1,5 @@
-Primer paso:
+Se trata de una web sencilla, pensada para un potencial cliente que podría ser una casa de música. La idea es que la utilicen como sistema para inventario. 
+En este caso, tenemos 3 tipos de instrumentos para agregar: guitarras, baterias y bajos, cada uno con sus respectivos atributos.
+La web presenta una barra tipo menú, en donde podemos encontrarnos con los botones para agregar dichos instrumentos, y uno de búsqueda.
+La búsqueda arrojará los resultados que coincidan con los nombres de las marcas de todos los instrumentos que hayan sido agregados.
+En caso de buscar con un "*", la búsqueda arrojará todos los elementos que se encuentran en la base de datos.
