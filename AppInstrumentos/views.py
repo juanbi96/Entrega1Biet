@@ -48,7 +48,7 @@ def busqueda_db(request):
     return render(request, "busqueda_db.html", {"mensaje_busqueda":"Seleccione un instrumento"})
 
 def resultado_busqueda(request):
-    if request.GET["marca"]:
+    if "marca" in request.GET:
         valor_url = request.GET["marca"]
         if valor_url != "*":
             baterias_filtradas = Baterias.objects.filter(marca = valor_url)
