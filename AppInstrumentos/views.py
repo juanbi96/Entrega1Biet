@@ -14,6 +14,9 @@ def agregar_bajos(request):
             bajo_nuevo = Bajos(marca = datos["marca"], modelo = datos["modelo"], año_fabricacion = datos["año_fabricacion"], cuerdas = datos["cuerdas"])
             bajo_nuevo.save()
             return render(request, "inicio.html", {"mensaje_inicio": "El instrumento ha sido agregado exitosamente!"})
+        else:
+            formulario_vacio = BajosForm()
+            return render(request, "agregar_baterias.html", {"form_bajo":formulario_vacio})
     else:
         formulario_vacio = BajosForm()
         return render(request, "agregar_bajos.html", {"form_bajo":formulario_vacio})
@@ -27,6 +30,9 @@ def agregar_baterias(request):
             bata_nueva = Baterias(marca = datos["marca"], modelo = datos["modelo"], año_fabricacion = datos["año_fabricacion"])
             bata_nueva.save()
             return render(request, "inicio.html", {"mensaje_inicio": "El instrumento ha sido agregado exitosamente!"})
+        else:
+            formulario_vacio = BateriasForm()
+            return render(request, "agregar_baterias.html", {"form_bateria":formulario_vacio})
     else:
         formulario_vacio = BateriasForm()
         return render(request, "agregar_baterias.html", {"form_bateria":formulario_vacio})    
@@ -40,6 +46,9 @@ def agregar_guitarras(request):
             guitarra_nueva = Guitarras(marca = datos["marca"], modelo = datos["modelo"], año_fabricacion = datos["año_fabricacion"], cuerdas = datos["cuerdas"])
             guitarra_nueva.save()
             return render(request, "inicio.html", {"mensaje_inicio": "El instrumento ha sido agregado exitosamente!"})
+        else:
+            formulario_vacio = GuitarrasForm()
+            return render(request, "agregar_baterias.html", {"form_guitarra":formulario_vacio})
     else:
         formulario_vacio = GuitarrasForm()
         return render(request, "agregar_guitarras.html", {"form_guitarra":formulario_vacio})
